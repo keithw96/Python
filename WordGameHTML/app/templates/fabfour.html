@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+Here are the Beatles: 
+
+<ol>
+
+    {% for name in the_names %}
+        <li>{{name}}
+    {% endfor %}
+
+    <p>
+    You really like <b>{{the_guitarist}}</b> and here's why: <b>{{the_why}}</b>.
+    </p>
+
+</ol>
+
+{% endblock %}

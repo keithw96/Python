@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+        <link rel="stylesheet" href="\static\webapp.css" />
+    </head>
+
+<body>
+<h1> RULES </h1>
+
+<p>
+	 1. Each word must be made up from letters contained within the source word 
+<br> 2. The words all have 3 or more letters. 
+<br> 3. There are no duplicate words 
+<br> 4. None of the 7 submitted words is the source word
+</p>
+	
+<p>
+<li> make 7 words out of the following word follow the rules above. 
+<li> seperate the words with a space
+
+<h1>Your Word is <b >{{ word }} </b></h1>
+<form action='/processform' method="POST">
+	<table>
+		<tr>
+			<td>input:</td>
+			<td><input type="text" name="wordInput"</td>          
+		<tr>
+			<td></td>
+			<td><input type="submit" value="Submit"></td>
+		</tr>
+
+	</table>
+</form>
+
+</p>
+</body>
+</html>

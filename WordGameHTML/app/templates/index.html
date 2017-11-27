@@ -1,0 +1,62 @@
+ {% extends "base.html" %}
+ 
+ {% block the_body %}
+        <h2>JSON with Python</h2>
+        <p>Here is how to read 
+        <a target="_self" href="http://json.org/">JSON</a>
+        data from 
+        <a target="_blank" href="https://www.python.org/">Python</a>
+        :</p>
+		<form action="http://google.com">
+			<input type="submit" value="Go to Google" />
+		</form>
+		
+		<keenan>
+		THIS IS A MOFO TEST!
+		</keenan>
+		
+        <pre>
+        import json
+
+        with open('myfile.json') as jf:
+            data = json.load(jf)
+        </pre>
+        <h2>Why is JSON useful?</h2>
+        <p>Here's why you might want to consider using JSON:</p>
+        
+        <!-- 
+             ul: unordered list (bullets), 
+             ol: ordered list (numbers).
+        -->
+        
+        <ol>
+            <li>Because it's <i>cool</i>.
+            <li>Because <b>everyone</b> else uses it.
+            <li>Because it really has NOTHING to do with JavaScript.
+            <li>Because Paul said so.
+        </ol>
+
+        <h2>My Guitar Hero</h2>
+        <a href="https://en.wikipedia.org/wiki/Jimmy_Page" target="_blank">
+             <img width=100 src="/static/jimmy.jpg">
+        </a>
+
+        <h2>Comments Section</h2>
+        <p>Please tell me the name of your guitar hero:</p>
+        <form action='/processform' method="POST">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="hero"></td>           
+                </tr>
+                <tr>
+                    <td>Why is this guitarist your hero:</td> 
+                    <td><input type="text" name="why"></td>
+                </tr>    
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Tell me"></td>
+                </tr>
+            </table>
+        </form>
+ {% endblock %}
